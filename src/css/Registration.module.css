@@ -125,6 +125,18 @@ button{
     text-decoration: none;
     font-weight: 600;
 }
+
+
+.error_link p{
+    font-size: 15px;
+    /* font-weight: 10px; */
+    color: #ff0000;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    
+}
+
 .register_link p a:hover{
     text-decoration: underline;
 }

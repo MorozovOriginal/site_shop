@@ -3,9 +3,9 @@ import { Context } from "./index"
 import React from 'react';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
+import Registration from "./Pages/Registration";
 import { Routes, Route } from "react-router-dom"
 import './App.css';
-import Registration from "./Pages/Registration";
 
 function App() {
 

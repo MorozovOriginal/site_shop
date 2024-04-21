@@ -13,6 +13,8 @@ function Login() {
   const { store } = useContext(Context);
   const navigate = useNavigate()
 
+  const [error, setError] = useState(null);
+
   return (
     <>
       <section>
@@ -38,9 +40,6 @@ function Login() {
                   placeholder="Email"
                 />
 
-
-                {/* <input type="email" required>
-                    <label>Email</label> */}
               </div>
               <div className={styles.input_box}>
                 <span className={styles.icon}>
@@ -52,16 +51,37 @@ function Login() {
                   placeholder="Password"
                 />
 
-                {/* <input type="password" required>
-                    <label>Password</label> */}
               </div>
               <div className={styles.remember_forgot}>
                 {/* <label><input type="checkbox">Запомнить меня</label>*/}
                 <a href="#">Забыли пароль?</a>
               </div>
-              {/* <button type="submit">Login</button> */}
+
+
+              <button
+                onClick={(click) => {
+                  click.preventDefault();
+                  store.login(email, password).then(function (result) {
+                    console.log(result.response.data.messagee);
+                    setError(result.response.data.messagee);
+                  });
+                  if (error !== "Пользователь не найден!" || error !== "Неверный пароль!")
+                    navigate("/home")
+
+                }}
+              >
+                Вход
+              </button>
+
               <div className={styles.register_link}>
                 <p>У вас еще нет аккаунта? <a href="reg.html">Зарегистрируйтесь</a></p>
+              </div>
+              <div className={styles.error_link}>
+                <p>
+                  {
+                    error
+                  }
+                </p>
               </div>
             </form>
           </div>
@@ -73,49 +93,3 @@ function Login() {
 }
 
 export default Login;
-
-{/* <div classNameN{me={styles.login}>
-            <div classNameN{me={styles.login_box}>
-              <form action="">
-                <h2>Login</h2>
-                <div classNameN{me={styles.input_box}>
-                  <span classNameN{me={styles.icon}>
-                    <i classNameN{me="fi fi_sr_envelope"></i>
-                  </span>
-                  <input
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    type="email"
-                    placeholder="Email"
-                  />
-                </div>
-                <div classNameN{me={styles.input_box}>
-                  <span classNameN{me={styles.icon}>
-                  </span>
-                  <input
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
-                <div classNameN{me={styles.remember_forgot}>
-                  <a href="#">Забыли пароль?</a>
-                </div>
-                <button
-                  onClick={() => {
-                    store.login(email, password);
-                    navigate("/login")
-                  }}
-                >
-                  Войти
-                </button>
-
-
-
-                <div classNameN{me={styles.register_link}>
-                  <p>У вас еще нет аккаунта? <a href="reg.html">Зарегистрируйтесь</a></p>
-                </div>
-              </form>
-            </div>
-          </div> */}
