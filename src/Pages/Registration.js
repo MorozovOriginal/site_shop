@@ -74,21 +74,29 @@ const Registration = () => {
                                     return;
                                 }
                                 store.reg(email, name, password).then(function (result) {
-
-                                    console.log(result.response.data.messagee);
-                                    setError(result.response.data.messagee);
-                                    // alert(error);
+                                    try {
+                                        console.log(result.response.data.messagee);
+                                        setError(result.response.data.messagee);
+                                    }
+                                    catch {
+                                        if (result.statusText === "OK") {
+                                            console.log(result.statusText);
+                                            setError("Успешно !");
+                                            navigate("/login")
+                                        }
+                                    }
                                 });
-
-                                // navigate("/login")
-
+                                // if (error === "Успешно !") {
+                                //     console.log(error);
+                                  
+                                // }
                             }}
                         >
                             Регистрация
                         </button>
 
                         <div className={styles.register_link}>
-                            <p>У вас уже есть аккаунт? <a href="login.html">Войдите</a></p>
+                            <p>У вас уже есть аккаунт? <a href="/login">Войдите</a></p>
                         </div>
                         <div className={styles.error_link}>
                             <p>

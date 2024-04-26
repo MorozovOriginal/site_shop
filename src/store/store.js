@@ -53,6 +53,7 @@ export default class Store {
             //const response = await AuthService.login(username, password)
             const response = await axios.post(`${API_URL}/login`, { email: email, password: password })
             console.log(response)
+            
             localStorage.setItem('accessToken', response.data.accessToken)
             localStorage.setItem('refreshToken', response.data.refreshToken)
             localStorage.setItem('email', response.data.user.email)

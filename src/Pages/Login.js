@@ -62,11 +62,22 @@ function Login() {
                 onClick={(click) => {
                   click.preventDefault();
                   store.login(email, password).then(function (result) {
-                    console.log(result.response.data.messagee);
-                    setError(result.response.data.messagee);
+                    try {
+                      console.log(result.response.data.messagee);
+                      setError(result.response.data.messagee);
+                    }
+                    catch {
+                      if (result.statusText === "OK") {
+                        console.log(result.statusText);
+                        setError("Успешно !");
+                        navigate("/home")
+                      }
+                    }
                   });
-                  if (error !== "Пользователь не найден!" || error !== "Неверный пароль!")
-                    navigate("/home")
+                  // if (error === "Успешно !") {
+                  //   console.log(error);
+                
+                  // }
 
                 }}
               >
@@ -74,7 +85,7 @@ function Login() {
               </button>
 
               <div className={styles.register_link}>
-                <p>У вас еще нет аккаунта? <a href="reg.html">Зарегистрируйтесь</a></p>
+                <p>У вас еще нет аккаунта? <a href="/registration">Зарегистрируйтесь</a></p>
               </div>
               <div className={styles.error_link}>
                 <p>

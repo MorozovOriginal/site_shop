@@ -153,7 +153,6 @@ li:hover a{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
 }
 
 footer{
@@ -188,7 +187,6 @@ footer{
 
 }
 .street{
-    width: 90%;
     max-height: 70px;
     display: flex;
     color: #fff;
