@@ -50,17 +50,7 @@ const Registration = () => {
                                 placeholder="Password"
                             />
                         </div>
-                        <div className={styles.input_box}>
-                            <span className={styles.icon}>
-                            </span>
-
-                            <input
-                                onChange={(e) => setPassword(e.target.value)}
-                                value={password}
-                                type="password"
-                                placeholder="Repeat Password"
-                            />
-                        </div>
+                        
                         <div className={styles.remember_forgot}>
                             {/* <label><input_type="checkbox">Запомнить меня</label> */}
                         </div>

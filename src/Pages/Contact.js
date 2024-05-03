@@ -84,7 +84,7 @@ function Contact() {
                     <div className={styles.social_media2}>
                         < div className={styles.border_social}></div>
                         < div className={styles.user}>
-                            <img src={PUBLIC_URL + "/profile.png"} href="@" height="27px" />
+                            <img src={PUBLIC_URL + "/profile.png"} href="/personal" height="27px" />
                         </div>
                         <div className={styles.border_social}></div>
                         < div className={styles.settings}>

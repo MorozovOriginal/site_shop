@@ -29,7 +29,7 @@ function Home() {
                     </ul>
                 </div>
                 <div className={styles.logo}>
-                    <img src={PUBLIC_URL + "/name.png"} alt="" />
+                    <img src={PUBLIC_URL + "/name.svg"} alt="" />
                 </div>
                 <footer >
                     <div className={styles.social_media1}>
@@ -47,7 +47,7 @@ function Home() {
                             <div className={styles.pictures}>
                                 <img src={PUBLIC_URL + "/tg.png"} className={styles.pics} alt="" />
                             </div>
-                            <a href="@">г. Брест ул. Советская, 34</a>
+                            <a href="/contact">г. Брест ул. Советская, 34</a>
                             <div className={styles.pictures}>
                                 <img src={PUBLIC_URL + "/inst.png"} className={styles.pics} alt="" />
                             </div>
@@ -56,7 +56,7 @@ function Home() {
                     <div className={styles.social_media2}>
                         <div className={styles.border_social}></div>
                         <div className={styles.user}>
-                            <img src={PUBLIC_URL + "/profile.png"} href="@" height="27px" />
+                            <img src={PUBLIC_URL + "/profile.png"} href="/personal" height="27px" />
                         </div>
                         <div className={styles.border_social}></div>
                         <div className={styles.settings}>

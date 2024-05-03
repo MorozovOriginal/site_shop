@@ -7,6 +7,8 @@ import Contact from './Pages/Contact'
 import Registration from "./Pages/Registration";
 import { Routes, Route } from "react-router-dom"
 import './App.css';
+import Personal from "./Pages/Personal";
+import Edit from "./Pages/Edit";
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/registration' element={<Registration />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/personal' element={<Personal />} />
+        <Route path='/edit' element={<Edit />} />
       </Routes>
     </>
 
