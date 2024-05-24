@@ -23,9 +23,9 @@ function Home() {
                 <div className={styles.main}>
                     <ul className={styles.nav_menu}>
                         <li><div className={styles.border0}><div className={styles.border1}><a className={styles.nav_item_line} href="@">главная</a></div></div></li>
-                        <li><div className={styles.border2}><a className={styles.nav_item} href="">услуги</a></div></li>
+                        <li><div className={styles.border2}><a className={styles.nav_item} href="">товары</a></div></li>
                         <li><div className={styles.border3}><a className={styles.nav_item} href="/contact">контакты</a></div></li>
-                        <li><div className={styles.border4}><a className={styles.nav_item} href="">о нас</a></div></li>
+                        <li><div className={styles.border4}><a className={styles.nav_item} href="/about">о нас</a></div></li>
                     </ul>
                 </div>
                 <div className={styles.logo}>

@@ -20,10 +20,10 @@ function Login() {
       <section>
         <header>
           <ul className={styles.nav_menu}>
-            <li><div className={styles.border}><a href="/home" className={styles.nav_item}>главная</a></div></li>
-            <li><div className={styles.border}><a href="@" className={styles.nav_item}>услуги</a></div></li>
+            <li><div className={styles.border}><div className={styles.border1}><a href="/home" className={styles.nav_item}>главная</a></div></div></li>
+            <li><div className={styles.border}><a href="@" className={styles.nav_item}>товары</a></div></li>
             <li><div className={styles.border}><a href="/contact" className={styles.nav_item}>контакты</a></div></li>
-            <li><div className={styles.border}><a href="@" className={styles.nav_item}>о нас</a></div></li>
+            <li><div className={styles.border}><a href="/about" className={styles.nav_item}>о нас</a></div></li>
           </ul>
         </header>
         <div className={styles.login}>

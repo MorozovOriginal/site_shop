@@ -72,6 +72,12 @@ a {
     border-right: 1px solid #fff;
     height: 100px;
 }
+.border1{
+    border-left: 1px solid #fff;
+    /* padding: 23px;  */
+    height: 100px;
+
+}
 
 .nav_item {
     color: #fff;
