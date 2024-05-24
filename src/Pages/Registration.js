@@ -7,7 +7,6 @@ import styles from "../css/Registration.module.css"
 
 const Registration = () => {
     const [email, setEmail] = useState("");
-    const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate()
     const { store } = useContext(Context);
@@ -34,23 +33,13 @@ const Registration = () => {
                             <span className={styles.icon}>
                             </span>
                             <input
-                                onChange={(e) => setName(e.target.value)}
-                                value={name}
-                                type="name"
-                                placeholder="Name"
-                            />
-                        </div>
-                        <div className={styles.input_box}>
-                            <span className={styles.icon}>
-                            </span>
-                            <input
                                 onChange={(e) => setPassword(e.target.value)}
                                 value={password}
                                 type="password"
                                 placeholder="Password"
                             />
                         </div>
-                        
+
                         <div className={styles.remember_forgot}>
                             {/* <label><input_type="checkbox">Запомнить меня</label> */}
                         </div>
@@ -59,11 +48,11 @@ const Registration = () => {
                             onClick={(click) => {
                                 click.preventDefault();
                                 setError(null);
-                                if (email === "" || name === "" || password === "") {
+                                if (email === "" || password === "") {
                                     setError("Заполните данные для регистрации!")
                                     return;
                                 }
-                                store.reg(email, name, password).then(function (result) {
+                                store.reg(email, password).then(function (result) {
                                     try {
                                         console.log(result.response.data.messagee);
                                         setError(result.response.data.messagee);
@@ -78,7 +67,7 @@ const Registration = () => {
                                 });
                                 // if (error === "Успешно !") {
                                 //     console.log(error);
-                                  
+
                                 // }
                             }}
                         >

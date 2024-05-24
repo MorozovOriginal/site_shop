@@ -9,7 +9,7 @@ import { Routes, Route } from "react-router-dom"
 import './App.css';
 import Personal from "./Pages/Personal";
 import Edit from "./Pages/Edit";
-
+import About from "./Pages/About"
 function App() {
 
   const { store } = useContext(Context)
@@ -23,6 +23,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/personal' element={<Personal />} />
         <Route path='/edit' element={<Edit />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </>
 

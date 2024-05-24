@@ -12,13 +12,14 @@ function Contact() {
 
     return (
         <>
+        <section>
             <div className={styles.main_maps}>
                 <div className={styles.head}>
                     <ul className={styles.nav_menu}>
                         <li><div className={styles.border}><div className={styles.border1}><a href="/home" className={styles.nav_item}>главная</a></div></div></li>
-                        <li><div className={styles.border}><a href="@" className={styles.nav_item}>услуги</a></div></li>
+                        <li><div className={styles.border}><a href="@" className={styles.nav_item}>товары</a></div></li>
                         <li><div className={styles.border}><a href="@" className={styles.nav_item_line}>контакты</a></div></li>
-                        <li><div className={styles.border}><a href="@" className={styles.nav_item}>о нас</a></div></li>
+                        <li><div className={styles.border}><a href="/about" className={styles.nav_item}>о нас</a></div></li>
                     </ul>
                 </div>
                 <div className={styles.main}>
@@ -49,11 +50,11 @@ function Contact() {
                         </div >
                         <div className={styles.text_main}>
                             < div className={styles.main_social_media}>
-                                <img src={PUBLIC_URL + "/inst-black.png"} className={styles.pics} />
+                                <img src={PUBLIC_URL + "/inst.png"} className={styles.pics} />
                                 <p align="center">serencloth.by</p>
                             </div >
                             <div className={styles.main_social_media}>
-                                < img src={PUBLIC_URL + "/tg-black.png"} className={styles.pics} />
+                                < img src={PUBLIC_URL + "/tg.png"} className={styles.pics} />
                                 <p align="center">serenclothby</p>
                             </div >
                         </div >
@@ -93,6 +94,7 @@ function Contact() {
                     </div >
                 </footer >
             </div >
+            </section>
         </>
     );
 }

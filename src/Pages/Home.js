@@ -22,10 +22,10 @@ function Home() {
             <div className={styles.header}>
                 <div className={styles.main}>
                     <ul className={styles.nav_menu}>
-                        <li><div className={styles.border0}><div className={styles.border1}><a className={styles.nav_item_line} href="@">главная</a></div></div></li>
-                        <li><div className={styles.border2}><a className={styles.nav_item} href="">услуги</a></div></li>
+                        <li><div className={styles.border0}><div className={styles.border1}><a className={styles.nav_item_line} href="/home">главная</a></div></div></li>
+                        <li><div className={styles.border2}><a className={styles.nav_item} href="">товары</a></div></li>
                         <li><div className={styles.border3}><a className={styles.nav_item} href="/contact">контакты</a></div></li>
-                        <li><div className={styles.border4}><a className={styles.nav_item} href="">о нас</a></div></li>
+                        <li><div className={styles.border4}><a className={styles.nav_item} href="/about">о нас</a></div></li>
                     </ul>
                 </div>
                 <div className={styles.logo}>
@@ -55,8 +55,15 @@ function Home() {
                     </div>
                     <div className={styles.social_media2}>
                         <div className={styles.border_social}></div>
-                        <div className={styles.user}>
-                            <img src={PUBLIC_URL + "/profile.png"} href="/personal" height="27px" />
+                        <div className={styles.user} onClick={(click) => {
+                            if (localStorage.getItem("email") === null) {
+                                navigate('/login')
+                            }
+                            else {
+                                navigate('/personal')
+                            }
+                        }}>
+                            <img src={PUBLIC_URL + "/profile.png"} height="27px" />
                         </div>
                         <div className={styles.border_social}></div>
                         <div className={styles.settings}>
