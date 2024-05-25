@@ -24,7 +24,7 @@ function About() {
                     <header>
                     <ul className={styles.nav_menu}>
                         <li><div className={styles.border}><div className={styles.border1}><a href="/home" className={styles.nav_item}>главная</a></div></div></li>
-                        <li><div className={styles.border}><a href="@" className={styles.nav_item}>товары</a></div></li>
+                        <li><div className={styles.border}><a href="/product" className={styles.nav_item}>товары</a></div></li>
                         <li><div className={styles.border}><a href="/contact" className={styles.nav_item}>контакты</a></div></li>
                         <li><div className={styles.border}><a href="@" className={styles.nav_item_line}>о нас</a></div></li>
                     </ul>
@@ -66,7 +66,7 @@ function About() {
                                 для кастомизасции по нашему адресу, либо мы выполняем 
                                     заказ по вашим критериям. Также у вас есть возможность 
                                     отправить свою вещь по почте</p>
-                                    <button className={styles.button_block} href="/contact">Где мы находимся</button>
+                                    <button className={styles.button_block} onClick={(click) => navigate('/contact')}>Где мы находимся</button>
                                 </div>
                             </div>
                             <div className={styles.block_1}>
@@ -101,9 +101,9 @@ function About() {
                         </div>
                         <footer>
                     <div className={styles.social_media1}>
-                        <div className={styles.favourites}>
+                        {/* <div className={styles.favourites}>
                             <img src={PUBLIC_URL + "/fav.png"} href="@" height="27px" />
-                        </div>
+                        </div> */}
                         <div className={styles.border_social}></div>
                         <div className={styles.shopping_cart}>
                             < img src={PUBLIC_URL + "/cart.png"} href="@" height="27px" />
@@ -127,9 +127,9 @@ function About() {
                             <img src={PUBLIC_URL + "/profile.png"} href="/personal" height="27px" />
                         </div>
                         <div className={styles.border_social}></div>
-                        < div className={styles.settings}>
+                        {/* < div className={styles.settings}>
                             < img src={PUBLIC_URL + "/set.png"} href="@" height="27px" />
-                        </div >
+                        </div > */}
                     </div >
                 </footer >
 

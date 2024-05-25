@@ -318,6 +318,7 @@ footer{
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    cursor: pointer;
     /* position: absolute; */
 }
 
@@ -348,6 +349,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 button{
     transition: transform 0.5s;
@@ -372,6 +374,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .shopping_cart img{
     transition: transform 0.5s;
@@ -385,6 +388,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .user img{
     transition: 0.5s;
@@ -398,6 +402,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .settings img{
     transition: 0.5s;

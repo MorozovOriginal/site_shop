@@ -17,7 +17,7 @@ function Contact() {
                 <div className={styles.head}>
                     <ul className={styles.nav_menu}>
                         <li><div className={styles.border}><div className={styles.border1}><a href="/home" className={styles.nav_item}>главная</a></div></div></li>
-                        <li><div className={styles.border}><a href="@" className={styles.nav_item}>товары</a></div></li>
+                        <li><div className={styles.border}><a href="/product" className={styles.nav_item}>товары</a></div></li>
                         <li><div className={styles.border}><a href="@" className={styles.nav_item_line}>контакты</a></div></li>
                         <li><div className={styles.border}><a href="/about" className={styles.nav_item}>о нас</a></div></li>
                     </ul>
@@ -62,9 +62,9 @@ function Contact() {
                 </div >
                 <footer>
                     <div className={styles.social_media1}>
-                        <div className={styles.favourites}>
+                        {/* <div className={styles.favourites}>
                             <img src={PUBLIC_URL + "/fav.png"} href="@" height="27px" />
-                        </div>
+                        </div> */}
                         <div className={styles.border_social}></div>
                         <div className={styles.shopping_cart}>
                             < img src={PUBLIC_URL + "/cart.png"} href="@" height="27px" />
@@ -88,9 +88,9 @@ function Contact() {
                             <img src={PUBLIC_URL + "/profile.png"} href="/personal" height="27px" />
                         </div>
                         <div className={styles.border_social}></div>
-                        < div className={styles.settings}>
+                        {/* < div className={styles.settings}>
                             < img src={PUBLIC_URL + "/set.png"} href="@" height="27px" />
-                        </div >
+                        </div > */}
                     </div >
                 </footer >
             </div >
